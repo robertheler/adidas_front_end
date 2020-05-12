@@ -1,0 +1,9 @@
+[submodule "adidas-product"]
+	path = adidas-product
+	url = https://github.com/9-space-lobster/adidas-product.git
+[submodule "reviews-module"]
+	path = reviews-module
+	url = https://github.com/9-space-lobster/reviews-module.git
+[submodule "adidas-related-info"]
+	path = adidas-related-info
+	url = https://github.com/9-space-lobster/adidas-related-info.git
