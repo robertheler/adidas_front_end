@@ -1,0 +1,53 @@
+version: "3"
+services:
+  proxy:
+    #build: .
+    image: robertheler/fec-proxy
+    hostname: proxy
+    container_name: proxy
+    #cpu_shares: 100
+    #mem_limit: 300m
+
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+      - "3001"
+      - "3002"
+      - "3003"
+      - "27017"
+    depends_on:
+      - product
+      - mongo
+
+  product:
+    #build: ./adidas-product
+    image: robertheler/fec-solo
+    hostname: product
+    container_name: product
+    #cpu_shares: 100
+    #mem_limit: 300m
+    ports:
+      - "3001:3001"
+    expose:
+      - "3000"
+      - "3001"
+      - "3002"
+      - "3003"
+      - "27017"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    #cpu_shares: 100
+    #mem_limit: 300m
+    expose:
+      - "3000"
+      - "3001"
+      - "3002"
+      - "3003"
+      - "27017"
+    ports:
+      - "27017:27017"
+

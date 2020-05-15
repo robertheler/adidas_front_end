@@ -3,3 +3,5 @@
 
 #Our node_modules folder is installed when you run the install script so we don't need to save it in our repo
 node_modules
+
+rootkey.csv

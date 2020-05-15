@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+db/data/images
+adidas-product
+adidas-related-info
+reviews-module
+rootkey.csv
